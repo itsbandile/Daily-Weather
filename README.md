@@ -28,7 +28,7 @@ npm run dev
 
 ## Live Demo
 
-Add your Netlify link here (you'll get it in Step 7)
+https://daily-weather-bm.netlify.app/
 
 ## Author
 
