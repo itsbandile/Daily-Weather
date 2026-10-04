@@ -19,12 +19,12 @@ function App() {
   const [insights, setInsights] = useState([])
   const [activeInsight, setActiveInsight] = useState(0)
 
-  const [latitude, setLatitude] = useState(null)
-  const [longitude, setLongitude] = useState(null)
+  const [latitude, setLatitude] = useState(-29.8587)
+const [longitude, setLongitude] = useState(31.0218)
 
   const [location, setLocation] = useState('')
   const [searchLocation, setSearchLocation] = useState('')
-  const [userLocationName, setUserLocationName] = useState('')
+  const [userLocationName, setUserLocationName] = useState('Durban, South Africa')
   const [isSearchLocation, setIsSearchLocation] = useState(false)
   const [locationLoading, setLocationLoading] = useState(true)
 
@@ -56,7 +56,7 @@ function App() {
 
     if (!navigator.geolocation) {
       setLocationLoading(false)
-      alert('Location services are not supported by your browser.')
+      
       return
     }
 
@@ -102,7 +102,7 @@ function App() {
       },
       () => {
         setLocationLoading(false)
-        alert('Location access was denied. Please search for your city.')
+        
       }
     )
   }, [isSearchLocation])
